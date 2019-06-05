@@ -18,6 +18,8 @@ public class MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (Input.GetKey("w"))
         {
             rb.AddForce(new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * speed);
