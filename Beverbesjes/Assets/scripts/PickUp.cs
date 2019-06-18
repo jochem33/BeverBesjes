@@ -16,7 +16,7 @@ public class PickUp : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
                 if (hit.transform.tag == "pickable")
                 {
-                    if (inv.AddItemToInventory(1))
+                    if (inv.AddItemToInventory(inv.KeyByValue(hit.transform.name)))
                     {
                         inv.ChangeUIText();
                         Destroy(hit.transform.gameObject);

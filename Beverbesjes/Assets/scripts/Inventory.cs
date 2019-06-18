@@ -8,6 +8,8 @@ public class Inventory : MonoBehaviour
 {
     public Text invetoryText;
 
+    public Dictionary<int, string> InventoryItemRefrance = new Dictionary<int, string>();
+
     public int stackSize = 64;
 
     public static int inventorySize = 5;
@@ -42,7 +44,7 @@ public class Inventory : MonoBehaviour
         invetoryText.text = "";
         for (int i = 0; i < inventory.Length; i++)
         {
-            invetoryText.text += inventory[i];
+            invetoryText.text += GetItemNameFromItemRefrance(inventory[i]);
             invetoryText.text += " : ";
             invetoryText.text += inventoryCount[i];
             invetoryText.text += "\n";
@@ -57,8 +59,33 @@ public class Inventory : MonoBehaviour
         Array.Resize(ref inventoryCount, inventorySize);
     }
 
+    public string GetItemNameFromItemRefrance(int i)
+    {
+        return InventoryItemRefrance[i];
+    }
+
     private void Awake()
     {
+        InventoryItemRefrance.Add(0, "None");
+        InventoryItemRefrance.Add(1, "Apple");
+        InventoryItemRefrance.Add(2, "Peer");
+        InventoryItemRefrance.Add(3, "Bot");
+
         ChangeUIText();
+    }
+
+    public int KeyByValue(string val)
+    {
+        int key = 0;
+        foreach (KeyValuePair<int, string> pair in InventoryItemRefrance)
+        {
+            string temp = pair.Value;
+            if (pair.Value == val || (temp += "(Clone)") == val)
+            {
+                key = pair.Key;
+                break;
+            }
+        }
+        return key;
     }
 }
