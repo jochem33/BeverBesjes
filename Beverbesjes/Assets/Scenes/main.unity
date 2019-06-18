@@ -343,7 +343,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.133e-42, y: 0, z: 0, w: 3e-45}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 5.44e-43, w: 2.5928416e+38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -577,6 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 699194937}
+  inv: {fileID: 669437031}
 --- !u!114 &669437031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invetoryText: {fileID: 1590823901}
-  stackSize: 64
+  stackSize: 16
   inventory: 0000000000000000000000000000000000000000
   inventoryCount: 0000000000000000000000000000000000000000
 --- !u!1 &699194936
@@ -1110,8 +1111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -60}
-  m_SizeDelta: {x: 160, y: 100}
+  m_AnchoredPosition: {x: 100, y: -170}
+  m_SizeDelta: {x: 160, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590823901
 MonoBehaviour:
@@ -1157,6 +1158,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590823899}
   m_CullTransparentMesh: 0
+--- !u!1 &1687640441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687640443}
+  - component: {fileID: 1687640442}
+  m_Layer: 0
+  m_Name: apple spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1687640442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687640441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77dc0fa8ec6e5845ab07f679aeb0109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apple: {fileID: 4739185181946952975, guid: a9b5d3d2a50436844991ceec9a994806, type: 3}
+  trans: {fileID: 1687640443}
+  fireRate: 1
+--- !u!4 &1687640443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687640441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.171, y: 5.66, z: -3.651}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1908920626
 PrefabInstance:
   m_ObjectHideFlags: 0
