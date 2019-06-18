@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour
-{
+public class MoveScript : MonoBehaviour {
+    
     public Camera cam;
     public Rigidbody rb;
+    public RectTransform rt;
     public int speed;
     public int maxSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+   
     }
 
     // Update is called once per frame
@@ -23,6 +24,15 @@ public class MoveScript : MonoBehaviour
         if (Input.GetKey("w"))
         {
             rb.AddForce(new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z) * speed);
+            if (rt.transform.localScale.x >= 0)
+            {
+                rt.localScale += new Vector3(-0.1f, 0, 0);
+            }
+            else
+            {
+                Destroy(rb);
+            }
+            
         }
         
         if (Input.GetKey("d"))
