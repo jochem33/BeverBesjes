@@ -8,11 +8,15 @@ public class Inventory : MonoBehaviour
 {
     public Text invetoryText;
 
+    public Text[] CountTexts = new Text[7];
+    public Image[] ItemImages = new Image[7];
+    public Sprite[] Sprites = new Sprite[3];
+
     public Dictionary<int, string> InventoryItemRefrance = new Dictionary<int, string>();
 
     public int stackSize = 64;
 
-    public static int inventorySize = 5;
+    public static int inventorySize = 7;
 
     public int[] inventory = new int[inventorySize];
     
@@ -44,6 +48,8 @@ public class Inventory : MonoBehaviour
         invetoryText.text = "";
         for (int i = 0; i < inventory.Length; i++)
         {
+            SetCountText(i);
+            SetSlotImage(i, inventory[i]);
             invetoryText.text += GetItemNameFromItemRefrance(inventory[i]);
             invetoryText.text += " : ";
             invetoryText.text += inventoryCount[i];
@@ -64,16 +70,6 @@ public class Inventory : MonoBehaviour
         return InventoryItemRefrance[i];
     }
 
-    private void Awake()
-    {
-        InventoryItemRefrance.Add(0, "None");
-        InventoryItemRefrance.Add(1, "Apple");
-        InventoryItemRefrance.Add(2, "Peer");
-        InventoryItemRefrance.Add(3, "Bot");
-
-        ChangeUIText();
-    }
-
     public int KeyByValue(string val)
     {
         int key = 0;
@@ -87,5 +83,24 @@ public class Inventory : MonoBehaviour
             }
         }
         return key;
+    }
+
+    public void SetSlotImage(int i, int id)
+    {
+        ItemImages[i].sprite = Sprites[id];
+    }
+    public void SetCountText(int i)
+    {
+        CountTexts[i].text = (inventoryCount[i]).ToString();
+    }
+
+
+    private void Awake()
+    {
+        InventoryItemRefrance.Add(0, "None");
+        InventoryItemRefrance.Add(1, "Apple");
+        InventoryItemRefrance.Add(2, "Peer");
+
+        ChangeUIText();
     }
 }
