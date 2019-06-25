@@ -686,7 +686,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.3976816e-19, z: 6.68e-43, w: 3.3976816e-19}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 378195893}
   - component: {fileID: 378195892}
   m_Layer: 5
-  m_Name: InvImg1
+  m_Name: InvImg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +813,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1505045974}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   apple: {fileID: 4739185181946952975, guid: a9b5d3d2a50436844991ceec9a994806, type: 3}
   trans: {fileID: 541675413}
-  fireRate: 0.01
+  fireRate: 1
 --- !u!4 &541675413
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,8 +1222,8 @@ MonoBehaviour:
   - {fileID: 1623024575}
   ItemImages:
   - {fileID: 55572684}
-  - {fileID: 378195892}
   - {fileID: 1674421137}
+  - {fileID: 378195892}
   - {fileID: 2129754466}
   - {fileID: 2078484912}
   - {fileID: 701888338}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97d7e67c220e4364c8e9feec15f7bffc, type: 3}
   - {fileID: 21300000, guid: 55aa47e3483107d45a57ef136f0a8309, type: 3}
   - {fileID: 21300000, guid: 115ed18f961a08a49aeca5b1336d0508, type: 3}
-  stackSize: 16
+  stackSize: 32
   inventory: 00000000000000000000000000000000000000000000000000000000
   inventoryCount: 00000000000000000000000000000000000000000000000000000000
 --- !u!1 &671395166
@@ -2269,8 +2269,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 55572683}
-  - {fileID: 378195891}
   - {fileID: 1674421136}
+  - {fileID: 378195891}
   - {fileID: 2129754465}
   - {fileID: 2078484911}
   - {fileID: 701888337}
@@ -2539,7 +2539,7 @@ GameObject:
   - component: {fileID: 1674421138}
   - component: {fileID: 1674421137}
   m_Layer: 5
-  m_Name: InvImg2
+  m_Name: InvImg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2557,7 +2557,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1505045974}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   apple: {fileID: 8690386518541260452, guid: 2ed7a00b366758f4ba27808d23874603, type: 3}
   trans: {fileID: 1687640443}
-  fireRate: 0.01
+  fireRate: 1
 --- !u!4 &1687640443
 Transform:
   m_ObjectHideFlags: 0
