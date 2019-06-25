@@ -94,6 +94,11 @@ public class Inventory : MonoBehaviour
         InventoryItemRefrance.Add(0, "None");
         InventoryItemRefrance.Add(1, "Apple");
         InventoryItemRefrance.Add(2, "Peer");
+        InventoryItemRefrance.Add(3, "Vliegenzwam");
+        InventoryItemRefrance.Add(4, "GeleRidderzwam");
+        InventoryItemRefrance.Add(5, "Voorjaarskuifzwam");
+        InventoryItemRefrance.Add(6, "Paddenstoel");
+
 
         ChangeUIText();
     }
