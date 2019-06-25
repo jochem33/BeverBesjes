@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2364519232992168775}
   - component: {fileID: 7325880467102564977}
   - component: {fileID: 7325880467102564878}
+  - component: {fileID: -1419981722218383871}
   m_Layer: 0
   m_Name: spar3 (23)
   m_TagString: Untagged
@@ -63,6 +64,20 @@ CapsuleCollider:
   m_Height: 3.0859203
   m_Direction: 1
   m_Center: {x: 0, y: 1.4712062, z: 0}
+--- !u!114 &-1419981722218383871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624440942033713492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65577b805f44784a84f0e5d2ff91832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 7325880467102564977}
+  script: {fileID: -1419981722218383871}
 --- !u!1 &5082143686389521609
 GameObject:
   m_ObjectHideFlags: 0

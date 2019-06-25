@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public Sprite[] Sprites = new Sprite[3];
 
     public Dictionary<int, string> InventoryItemRefrance = new Dictionary<int, string>();
+    public Dictionary<string, int> InventoryScoreRefrance = new Dictionary<string, int>();
 
     public int stackSize = 64;
 
@@ -88,16 +89,34 @@ public class Inventory : MonoBehaviour
         CountTexts[i].text = (inventoryCount[i]).ToString();
     }
 
+    public void ResetInventory()
+    {
+        for(int i = 0; i < inventory.Length; i++)
+        {
+            inventory[i] = 0;
+            inventoryCount[i] = 0;
+        }
+        ChangeUIText();
+        
+    }
+
 
     private void Awake()
     {
         InventoryItemRefrance.Add(0, "None");
+        InventoryScoreRefrance.Add("None", 0);
         InventoryItemRefrance.Add(1, "Apple");
+        InventoryScoreRefrance.Add("Apple", 10);
         InventoryItemRefrance.Add(2, "Peer");
+        InventoryScoreRefrance.Add("Peer", 25);
         InventoryItemRefrance.Add(3, "Vliegenzwam");
+        InventoryScoreRefrance.Add("Vliegenzwam", -75);
         InventoryItemRefrance.Add(4, "GeleRidderzwam");
+        InventoryScoreRefrance.Add("GeleRidderzwam", -25);
         InventoryItemRefrance.Add(5, "Voorjaarskuifzwam");
+        InventoryScoreRefrance.Add("Voorjaarskuifzwam", -50);
         InventoryItemRefrance.Add(6, "Paddenstoel");
+        InventoryScoreRefrance.Add("Paddenstoel", 5);
 
 
         ChangeUIText();
