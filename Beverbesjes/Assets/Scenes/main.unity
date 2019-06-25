@@ -12498,6 +12498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d418fe059953046b35179c44f409f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 46ec152cb58bbc74ca8a98231769f13a, type: 3}
   cam: {fileID: 534669904}
   rb: {fileID: 669437025}
   rt: {fileID: 52438693}
