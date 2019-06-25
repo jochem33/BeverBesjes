@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    AudioSource myAudioSource;
+    bool myToggleChange;
     public Camera cam;
     public Inventory inv;
 
+    void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,6 +24,7 @@ public class PickUp : MonoBehaviour
                 {
                     if (inv.AddItemToInventory(inv.KeyByValue(hit.transform.name)))
                     {
+                        myAudioSource.Play();
                         inv.ChangeUIText();
                         Destroy(hit.transform.gameObject);
                     }
