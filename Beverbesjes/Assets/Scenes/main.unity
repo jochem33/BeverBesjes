@@ -10824,6 +10824,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: voorjaarskluifzwam
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d5149715ddc75bd4bbc6c24a5890f400,
+        type: 3}
+      propertyPath: m_TagString
+      value: pickable
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d5149715ddc75bd4bbc6c24a5890f400,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24837,6 +24842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Paddenstoel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 953897013d05844d392773d31db98a88,
+        type: 3}
+      propertyPath: m_TagString
+      value: pickable
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 953897013d05844d392773d31db98a88,
         type: 3}
