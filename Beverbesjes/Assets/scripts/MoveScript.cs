@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class MoveScript : MonoBehaviour
 {
-
+    public AudioClip deathSound;
+    AudioSource audioSource;
     public Camera cam;
     public Rigidbody rb;
     public RectTransform rt;
@@ -19,6 +20,7 @@ public class MoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,9 +41,9 @@ public class MoveScript : MonoBehaviour
                 if (deathScreen.transform.localPosition.x > 0)
                 {
                     deathScreen.localPosition = new Vector3(0, 0, 0);
+                    audioSource.PlayOneShot(deathSound, 1.0f);
                 }
             }
-
         }
 
         if (Input.GetKey("d"))
@@ -51,6 +53,15 @@ public class MoveScript : MonoBehaviour
             {
                 rt.localScale += new Vector3(deathSpeedLeftRight, 0, 0);
             }
+            else
+            {
+                Destroy(rb);
+                if (deathScreen.transform.localPosition.x > 0)
+                {
+                    deathScreen.localPosition = new Vector3(0, 0, 0);
+                    audioSource.PlayOneShot(deathSound, 1.0f);
+                }
+            }
         }
         if (Input.GetKey("a"))
         {
@@ -59,6 +70,15 @@ public class MoveScript : MonoBehaviour
             {
                 rt.localScale += new Vector3(deathSpeedLeftRight, 0, 0);
             }
+            else
+            {
+                Destroy(rb);
+                if (deathScreen.transform.localPosition.x > 0)
+                {
+                    deathScreen.localPosition = new Vector3(0, 0, 0);
+                    audioSource.PlayOneShot(deathSound, 1.0f);
+                }
+            }
         }
         if (Input.GetKey("s"))
         {
@@ -66,6 +86,15 @@ public class MoveScript : MonoBehaviour
             if (rt.transform.localScale.x >= 0)
             {
                 rt.localScale += new Vector3(deathSpeedBackwards, 0, 0);
+            }
+            else
+            {
+                Destroy(rb);
+                if (deathScreen.transform.localPosition.x > 0)
+                {
+                    deathScreen.localPosition = new Vector3(0, 0, 0);
+                    audioSource.PlayOneShot(deathSound, 1.0f);
+                }
             }
         }
 
