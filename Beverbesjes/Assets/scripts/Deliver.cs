@@ -14,22 +14,21 @@ public class Deliver : MonoBehaviour
     {
         if (collision.transform.tag == "tent")
         {
-            
+            int scoreAdd = 0;
+
             for (int i = 0; i < inv.inventory.Length; i++)
             {
-                int scoreAdd = inv.InventoryScoreRefrance[inv.InventoryItemRefrance[inv.inventory[i]]];
-
-                for (int j = 0; j < inv.inventoryCount[i]; i++)
-                {
-                    Score += scoreAdd;
-                    rt.localScale += new Vector3(scoreAdd * .01f, 0, 0);
-                    print(j);
-                }
+                scoreAdd += inv.InventoryScoreRefrance[inv.InventoryItemRefrance[inv.inventory[i]]] * inv.inventoryCount[i];
+                print(scoreAdd);
             }
+
+            rt.transform.localScale += new Vector3(scoreAdd*.001f, 0, 0);
+            Score += scoreAdd;
 
             string scoreTempText = "Score: ";
             scoreTempText += (Score).ToString();
             ScoreText.text = scoreTempText;
+
             inv.ResetInventory();
         }
     }
