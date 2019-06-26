@@ -108,7 +108,7 @@ public class Inventory : MonoBehaviour
         InventoryItemRefrance.Add(1, "Apple");
         InventoryScoreRefrance.Add("Apple", 10);
         InventoryItemRefrance.Add(2, "Peer");
-        InventoryScoreRefrance.Add("Peer", 25);
+        InventoryScoreRefrance.Add("Peer", 20);
         InventoryItemRefrance.Add(3, "Vliegenzwam");
         InventoryScoreRefrance.Add("Vliegenzwam", -75);
         InventoryItemRefrance.Add(4, "GeleRidderzwam");
@@ -117,6 +117,8 @@ public class Inventory : MonoBehaviour
         InventoryScoreRefrance.Add("Voorjaarskuifzwam", -50);
         InventoryItemRefrance.Add(6, "Paddenstoel");
         InventoryScoreRefrance.Add("Paddenstoel", 5);
+        InventoryItemRefrance.Add(7, "Besje");
+        InventoryScoreRefrance.Add("Besje", 5);
 
 
         ChangeUIText();
